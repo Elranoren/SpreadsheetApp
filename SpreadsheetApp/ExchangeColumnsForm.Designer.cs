@@ -29,20 +29,10 @@ namespace SpreadsheetApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.submitExCols = new System.Windows.Forms.Button();
             this.firstCol = new System.Windows.Forms.TextBox();
             this.secondCol = new System.Windows.Forms.TextBox();
+            this.submitButton = new SpreadsheetApp.RoundedButton();
             this.SuspendLayout();
-            // 
-            // submitExCols
-            // 
-            this.submitExCols.Location = new System.Drawing.Point(137, 184);
-            this.submitExCols.Name = "submitExCols";
-            this.submitExCols.Size = new System.Drawing.Size(94, 29);
-            this.submitExCols.TabIndex = 0;
-            this.submitExCols.Text = "Submit";
-            this.submitExCols.UseVisualStyleBackColor = true;
-            this.submitExCols.Click += new System.EventHandler(this.submitExCols_Click);
             // 
             // firstCol
             // 
@@ -60,14 +50,32 @@ namespace SpreadsheetApp
             this.secondCol.TabIndex = 2;
             this.secondCol.Text = "Enter the Second Column to Exchange";
             // 
+            // submitButton
+            // 
+            this.submitButton.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submitButton.ButtonColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.submitButton.Location = new System.Drawing.Point(110, 181);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.OnHoverBorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.submitButton.OnHoverButtonColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.submitButton.OnHoverTextColor = System.Drawing.Color.Black;
+            this.submitButton.Size = new System.Drawing.Size(140, 35);
+            this.submitButton.TabIndex = 18;
+            this.submitButton.Text = "SUBMIT";
+            this.submitButton.TextColor = System.Drawing.Color.Black;
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            // 
             // ExchangeColumnsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 309);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.secondCol);
             this.Controls.Add(this.firstCol);
-            this.Controls.Add(this.submitExCols);
             this.Name = "ExchangeColumnsForm";
             this.Text = "ExchangeColumnsForm";
             this.ResumeLayout(false);
@@ -76,9 +84,8 @@ namespace SpreadsheetApp
         }
 
         #endregion
-
-        private System.Windows.Forms.Button submitExCols;
         private System.Windows.Forms.TextBox firstCol;
         private System.Windows.Forms.TextBox secondCol;
+        private RoundedButton submitButton;
     }
 }

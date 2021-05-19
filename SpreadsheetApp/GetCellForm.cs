@@ -19,7 +19,7 @@ namespace SpreadsheetApp
             InitializeComponent();
         }
 
-        private void submitSet_Click(object sender, EventArgs e)
+        private void submitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }

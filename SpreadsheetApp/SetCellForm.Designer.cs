@@ -33,7 +33,7 @@ namespace SpreadsheetApp
             this.column = new System.Windows.Forms.TextBox();
             this.str = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.SubmitSetGet = new System.Windows.Forms.Button();
+            this.submitButton = new SpreadsheetApp.RoundedButton();
             this.SuspendLayout();
             // 
             // row
@@ -69,22 +69,30 @@ namespace SpreadsheetApp
             this.label1.TabIndex = 3;
             this.label1.Text = "Please Enter the Realevant Data";
             // 
-            // SubmitSetGet
+            // submitButton
             // 
-            this.SubmitSetGet.Location = new System.Drawing.Point(199, 256);
-            this.SubmitSetGet.Name = "SubmitSetGet";
-            this.SubmitSetGet.Size = new System.Drawing.Size(94, 29);
-            this.SubmitSetGet.TabIndex = 4;
-            this.SubmitSetGet.Text = "Submit";
-            this.SubmitSetGet.UseVisualStyleBackColor = true;
-            this.SubmitSetGet.Click += new System.EventHandler(this.SubmitSetGet_Click);
+            this.submitButton.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submitButton.ButtonColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.submitButton.Location = new System.Drawing.Point(172, 248);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.OnHoverBorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.submitButton.OnHoverButtonColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.submitButton.OnHoverTextColor = System.Drawing.Color.Black;
+            this.submitButton.Size = new System.Drawing.Size(140, 35);
+            this.submitButton.TabIndex = 23;
+            this.submitButton.Text = "SUBMIT";
+            this.submitButton.TextColor = System.Drawing.Color.Black;
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // SetCellForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 316);
-            this.Controls.Add(this.SubmitSetGet);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.str);
             this.Controls.Add(this.column);
@@ -102,6 +110,6 @@ namespace SpreadsheetApp
         private System.Windows.Forms.TextBox column;
         private System.Windows.Forms.TextBox str;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button SubmitSetGet;
+        private RoundedButton submitButton;
     }
 }

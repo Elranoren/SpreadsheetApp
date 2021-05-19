@@ -29,20 +29,10 @@ namespace SpreadsheetApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.submitSet = new System.Windows.Forms.Button();
             this.row = new System.Windows.Forms.TextBox();
             this.col = new System.Windows.Forms.TextBox();
+            this.submitButton = new SpreadsheetApp.RoundedButton();
             this.SuspendLayout();
-            // 
-            // submitSet
-            // 
-            this.submitSet.Location = new System.Drawing.Point(146, 173);
-            this.submitSet.Name = "submitSet";
-            this.submitSet.Size = new System.Drawing.Size(94, 29);
-            this.submitSet.TabIndex = 0;
-            this.submitSet.Text = "Submit";
-            this.submitSet.UseVisualStyleBackColor = true;
-            this.submitSet.Click += new System.EventHandler(this.submitSet_Click);
             // 
             // row
             // 
@@ -60,14 +50,32 @@ namespace SpreadsheetApp
             this.col.TabIndex = 2;
             this.col.Text = "Enter Column Number Here";
             // 
+            // submitButton
+            // 
+            this.submitButton.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submitButton.ButtonColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.submitButton.Location = new System.Drawing.Point(113, 173);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.OnHoverBorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.submitButton.OnHoverButtonColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.submitButton.OnHoverTextColor = System.Drawing.Color.Black;
+            this.submitButton.Size = new System.Drawing.Size(140, 35);
+            this.submitButton.TabIndex = 20;
+            this.submitButton.Text = "SUBMIT";
+            this.submitButton.TextColor = System.Drawing.Color.Black;
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            // 
             // GetCellForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 281);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.col);
             this.Controls.Add(this.row);
-            this.Controls.Add(this.submitSet);
             this.Name = "GetCellForm";
             this.Text = "GetCellForm";
             this.ResumeLayout(false);
@@ -76,9 +84,8 @@ namespace SpreadsheetApp
         }
 
         #endregion
-
-        private System.Windows.Forms.Button submitSet;
         private System.Windows.Forms.TextBox row;
         private System.Windows.Forms.TextBox col;
+        private RoundedButton submitButton;
     }
 }

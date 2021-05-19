@@ -29,20 +29,10 @@ namespace SpreadsheetApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.submitSearchRow = new System.Windows.Forms.Button();
             this.searchRow = new System.Windows.Forms.TextBox();
             this.strToSearchRow = new System.Windows.Forms.TextBox();
+            this.submitButton = new SpreadsheetApp.RoundedButton();
             this.SuspendLayout();
-            // 
-            // submitSearchRow
-            // 
-            this.submitSearchRow.Location = new System.Drawing.Point(118, 178);
-            this.submitSearchRow.Name = "submitSearchRow";
-            this.submitSearchRow.Size = new System.Drawing.Size(94, 29);
-            this.submitSearchRow.TabIndex = 0;
-            this.submitSearchRow.Text = "Submit";
-            this.submitSearchRow.UseVisualStyleBackColor = true;
-            this.submitSearchRow.Click += new System.EventHandler(this.submitSearchRow_Click);
             // 
             // searchRow
             // 
@@ -60,14 +50,32 @@ namespace SpreadsheetApp
             this.strToSearchRow.TabIndex = 2;
             this.strToSearchRow.Text = "Enter String to Search";
             // 
+            // submitButton
+            // 
+            this.submitButton.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submitButton.ButtonColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.submitButton.Location = new System.Drawing.Point(100, 167);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.OnHoverBorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.submitButton.OnHoverButtonColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.submitButton.OnHoverTextColor = System.Drawing.Color.Black;
+            this.submitButton.Size = new System.Drawing.Size(140, 35);
+            this.submitButton.TabIndex = 21;
+            this.submitButton.Text = "SUBMIT";
+            this.submitButton.TextColor = System.Drawing.Color.Black;
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            // 
             // SearchRowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 256);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.strToSearchRow);
             this.Controls.Add(this.searchRow);
-            this.Controls.Add(this.submitSearchRow);
             this.Name = "SearchRowForm";
             this.Text = "SearchRowForm";
             this.ResumeLayout(false);
@@ -76,9 +84,8 @@ namespace SpreadsheetApp
         }
 
         #endregion
-
-        private System.Windows.Forms.Button submitSearchRow;
         private System.Windows.Forms.TextBox searchRow;
         private System.Windows.Forms.TextBox strToSearchRow;
+        private RoundedButton submitButton;
     }
 }

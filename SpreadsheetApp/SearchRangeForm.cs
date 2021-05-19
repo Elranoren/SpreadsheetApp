@@ -22,14 +22,9 @@ namespace SpreadsheetApp
             InitializeComponent();
         }
 
-        private void submitRange_Click(object sender, EventArgs e)
+        private void submitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void SearchRangeForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

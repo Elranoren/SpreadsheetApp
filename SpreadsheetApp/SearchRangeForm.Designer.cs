@@ -29,23 +29,13 @@ namespace SpreadsheetApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.submitRange = new System.Windows.Forms.Button();
             this.fromRow = new System.Windows.Forms.TextBox();
             this.toRow = new System.Windows.Forms.TextBox();
             this.fromCol = new System.Windows.Forms.TextBox();
             this.toCol = new System.Windows.Forms.TextBox();
             this.strRange = new System.Windows.Forms.TextBox();
+            this.submitButton = new SpreadsheetApp.RoundedButton();
             this.SuspendLayout();
-            // 
-            // submitRange
-            // 
-            this.submitRange.Location = new System.Drawing.Point(134, 217);
-            this.submitRange.Name = "submitRange";
-            this.submitRange.Size = new System.Drawing.Size(94, 29);
-            this.submitRange.TabIndex = 0;
-            this.submitRange.Text = "Submit";
-            this.submitRange.UseVisualStyleBackColor = true;
-            this.submitRange.Click += new System.EventHandler(this.submitRange_Click);
             // 
             // fromRow
             // 
@@ -87,32 +77,48 @@ namespace SpreadsheetApp
             this.strRange.TabIndex = 5;
             this.strRange.Text = "Enter String to Search";
             // 
+            // submitButton
+            // 
+            this.submitButton.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submitButton.ButtonColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.submitButton.Location = new System.Drawing.Point(118, 216);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.OnHoverBorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.submitButton.OnHoverButtonColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.submitButton.OnHoverTextColor = System.Drawing.Color.Black;
+            this.submitButton.Size = new System.Drawing.Size(140, 35);
+            this.submitButton.TabIndex = 20;
+            this.submitButton.Text = "SUBMIT";
+            this.submitButton.TextColor = System.Drawing.Color.Black;
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            // 
             // SearchRangeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 291);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.strRange);
             this.Controls.Add(this.toCol);
             this.Controls.Add(this.fromCol);
             this.Controls.Add(this.toRow);
             this.Controls.Add(this.fromRow);
-            this.Controls.Add(this.submitRange);
             this.Name = "SearchRangeForm";
             this.Text = "SearchRangeForm";
-            this.Load += new System.EventHandler(this.SearchRangeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button submitRange;
         private System.Windows.Forms.TextBox fromRow;
         private System.Windows.Forms.TextBox toRow;
         private System.Windows.Forms.TextBox fromCol;
         private System.Windows.Forms.TextBox toCol;
         private System.Windows.Forms.TextBox strRange;
+        private RoundedButton submitButton;
     }
 }
